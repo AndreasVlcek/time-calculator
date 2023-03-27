@@ -22,4 +22,13 @@ def add_time(start, duration, weekday=False):
   # add duration minutes to start minutes
   minutes = start_minutes + duration_minutes
 
+  # if we reach more than 60 minutes we must increase the hour
+  # nad keep the remaining minutes
+  if minutes >= 60:
+    start_hours += 1
+    minutes = minutes % 60
+
+  # add hours
+  hours = start_hours + duration_hours
+
   return return_time
