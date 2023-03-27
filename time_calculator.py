@@ -1,5 +1,5 @@
-def add_time(start, duration):
-    
+def add_time(start, duration, weekday=False):
+
     return_time = ''
 
     start_time_split = start.split(' ')
@@ -11,8 +11,12 @@ def add_time(start, duration):
     print(start_minutes)
     print(am_pm)
 
-    return return_time
+    duration_hours = int(duration.split(':')[0])
+    duration_minutes = int(duration.split(':')[1])
 
-    # TODO
+    print(duration_hours)
+    print(duration_minutes)
     
-    return new_time
+    # TODO
+
+    return return_time
